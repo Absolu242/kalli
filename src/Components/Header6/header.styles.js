@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Header = styled.div`
   position: relative;
-  max-width: 1280px;
+  // max-width: 1280px;
   margin: 0 auto;
   width: 100%;
   min-height: 100vh;
@@ -18,6 +18,10 @@ export const Header = styled.div`
     background-image: none !important;
     background-color: #fff;
   }
+
+  @media (max-width: 765px) {
+    padding: 2rem;
+  }
 `;
 export const HeaderNav = styled.div`
   display: flex;
@@ -32,12 +36,18 @@ export const HeaderLeft = styled.div`
   .menu-icon {
     padding-right: 5rem;
   }
+
+  @media (max-width: 765px) {
+    .menu-icon {
+      padding-right: 2rem;
+    }
+  }
 `;
 export const HeaderCenter = styled.div`
   position: relative;
   transform: translateX(5rem);
 
-  p {
+  div {
     font-size: 1.4rem;
     display: flex;
     align-items: center;
@@ -60,8 +70,13 @@ export const HeaderCenter = styled.div`
   &.activate {
     opacity: 0;
   }
+
+  @media (max-width: 765px) {
+    display: none;
+  }
 `;
 export const HeaderRight = styled.div`
+  display: flex;
   .btn {
     font-weight: 600;
     font-family: "Work Sans", sans-serif;
@@ -93,6 +108,34 @@ export const HeaderRight = styled.div`
         background-color: #000;
         padding: 1.5rem 1.2rem;
         color: #fff;
+      }
+    }
+  }
+
+  @media (max-width: 765px) {
+    .btn {
+      font-size: 1rem;
+      &-prim {
+        padding: 1rem 2.7rem;
+        margin-right: 1rem;
+      }
+
+      &-secn {
+        padding: 1.2rem 0.9rem;
+      }
+    }
+
+    &.activate {
+      .btn {
+        font-size: 1rem;
+        &-prim {
+          padding: 1rem 2.7rem;
+          margin-right: 1rem;
+        }
+
+        &-secn {
+          padding: 1.2rem 0.9rem;
+        }
       }
     }
   }
@@ -212,6 +255,25 @@ export const HeaderMain = styled.div`
 
     .mainHidden {
       display: flex;
+    }
+  }
+
+  @media (max-width: 765px) {
+    .annonce {
+      position: absolute;
+      right: 0;
+    }
+
+    .mainHidden {
+      &__left {
+        display: none;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .mainHidden {
+      width: 100%;
     }
   }
 `;

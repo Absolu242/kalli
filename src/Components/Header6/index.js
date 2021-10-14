@@ -29,20 +29,20 @@ export default function Header6() {
             )}
           </button>
           {clicked ? (
-            <img src="/Logo.png" alt="menu" className="menu-icon" />
+            <img src="/Logo.png" alt="menu" className="logo-icon" />
           ) : (
-            <img src="/LogoWhite.png" alt="menu" className="menu-icon" />
+            <img src="/LogoWhite.png" alt="menu" className="logo-icon" />
           )}
         </HeaderLeft>
 
         <HeaderCenter className={clicked ? "activate" : ""}>
-          <p>
+          <div>
             <a href="https://google.com">Fb</a>
             <div className="separator"></div>
             <a href="https://google.com">Tw</a>
             <div className="separator"></div>
             <a href="https://google.com">In</a>
-          </p>
+          </div>
         </HeaderCenter>
 
         <HeaderRight className={clicked ? "activate" : ""}>
@@ -57,9 +57,9 @@ export default function Header6() {
             <h1 className="item-name">Beoplay H9i</h1>
             <button className="item-btn">Buy Now</button>
           </div>
-          <p className="annonce">
+          <div className="annonce">
             Out Now <div className="line"></div>
-          </p>
+          </div>
         </>
 
         <div className="mainHidden">
